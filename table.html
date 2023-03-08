@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="table.css" title="Styles">
+    <script defer src="table.js"></script>
+    <title>Tabelka</title>
+</head>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Tabelka</a></li>
+        <li><a href="table.html">Formularz</a></li>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Przeszukaj stronę">
+        </div>
+    </ul>
+</nav>
+<main class="body">
+    <div class="container">
+        <h1 class="h1">Tabelka</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kolumna 1</th>
+                    <th>Kolumna 2</th>
+                    <th><button type="button" id="delete-button" onclick="deleteRow()">Usuń</button></th>
+                </tr>
+            </thead>
+            <tbody contenteditable>
+                <tr>
+                    <td>Wpisz</td>
+                    <td>Wpisz</td>
+                    <td contenteditable="false">
+                        <input type="checkbox" />
+                        <button type="button" onclick="moveUp(this)">Góra</button>
+                        <button type="button" onclick="moveDown(this)">Dół</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wpisz</td>
+                    <td>Wpisz</td>
+                    <td contenteditable="false">
+                        <input type="checkbox" />
+                        <button type="button" onclick="moveUp(this)">Góra</button>
+                        <button type="button" onclick="moveDown(this)">Dół</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wpisz</td>
+                    <td>Wpisz</td>
+                    <td contenteditable="false">
+                        <input type="checkbox" />
+                        <button type="button" onclick="moveUp(this)">Góra</button>
+                        <button type="button" onclick="moveDown(this)">Dół</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><button type="button" id="add-button" onclick="addRow()">Dodaj</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="row-count">3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</main>
+</body>
+
+</html>
